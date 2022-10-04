@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
 import Header from "../common/header";
 import bgImage from "../assets/img/header-bg.jpg"
+
+import Services from "../common/services";
+import Portfolio from "../common/portfolio";
 
 function Home() {
     return (
@@ -13,6 +15,9 @@ function Home() {
                 link="/services"
                 showButton={true}
                 />
+
+            <Services />
+            <Portfolio />
         </div>
     )
 }

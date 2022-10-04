@@ -7673,7 +7673,7 @@ textarea.form-control-lg {
 }
 
 .text-center {
-  text-align: center !important;
+  /* text-align: center !important; */
 }
 
 .text-decoration-none {
@@ -8108,7 +8108,7 @@ textarea.form-control-lg {
   }
 
   .justify-content-sm-center {
-    justify-content: center !important;
+    /* justify-content: center !important; */
   }
 
   .justify-content-sm-between {
