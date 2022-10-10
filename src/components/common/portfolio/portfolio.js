@@ -18,9 +18,9 @@ export default function Portfolio() {
                         <h2 className="section-heading text-uppercase">Portfolio</h2>
                         <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                     </div>
-                    <div className="row" >
+                    <div className="row">
                             {portfolio.map((item, index) => {
-                                return (<PortfolioItem {...item} key={item.title} />)
+                                return (<PortfolioItem {...item} key={item.title}/>)
                             })}
                     </div>
                 </div>
