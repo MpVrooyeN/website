@@ -1,6 +1,7 @@
+
 export default function SingleService(props) {
     return (
-            <div className="col-md-4">
+            <div className="col-lg-4 col-sm-6 md-4">
                 <span className="fa-stack fa-4x">
                     <i className="fas fa-circle fa-stack-2x text-primary"></i>
                     <i className={`fas ${props.icon} fa-stack-1x fa-inverse`}></i>
