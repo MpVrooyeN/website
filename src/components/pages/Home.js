@@ -1,8 +1,11 @@
 import Header from "../common/header";
 import bgImage from "../assets/img/header-bg.jpg"
 
-import Services from "../common/services";
-import Portfolio from "../common/portfolio";
+import Services from "../common/services/services";
+import Portfolio from "../common/portfolio/portfolio";
+import About from "./About";
+import Team from "../common/team/team";
+import Clients from "../common/clients/clients"
 
 function Home() {
     return (
@@ -18,6 +21,9 @@ function Home() {
 
             <Services />
             <Portfolio />
+            <About />
+            <Team />
+            <Clients />
         </div>
     )
 }
