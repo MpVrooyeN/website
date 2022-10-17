@@ -10,9 +10,9 @@ const clients = [
 
 export default function Clients() {
     return (
-        <div class="py-5">
-        <div class="container">
-            <div class="row align-items-center">
+        <div className="py-5">
+        <div className="container">
+            <div className="row align-items-center">
                 {clients.map((client) => {
                     return (<Client {...client} key={client.name} />)
                 })}

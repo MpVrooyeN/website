@@ -11,7 +11,6 @@ const portfolio = [
 
 export default function Portfolio() {
     return (
-        <div className="Portfolio">
             <section className="page-section bg-light" id="portfolio">
                 <div className="container">
                     <div className="text-center">
@@ -25,6 +24,5 @@ export default function Portfolio() {
                     </div>
                 </div>
             </section>
-        </div>
     )
 }
