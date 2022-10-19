@@ -1,3 +1,4 @@
+import { useState } from "react"
 import Field from "./field"
 
 const fields = {
@@ -10,9 +11,20 @@ const fields = {
 			{ name: 'message', elementName: 'textarea', placeholder: 'Your Message*', type: 'text', className: '' }]]
 }
 
-export default function Contact() {
+function Contact() {
 
-	
+	const [form, setForm] = useState({
+		name: '',
+		email: '',
+		number: '',
+		message: ''
+	});
+
+	const onSubmitForm = (e) => {
+		console.log()
+	}
+
+	console.log(form)
 
 	return (
 		<section className="page-section" id="contact">
@@ -28,14 +40,19 @@ export default function Contact() {
                 <!-- To make this form functional, sign up at-->
                 <!-- https://startbootstrap.com/solution/contact-forms--> */}
 				{/* <!-- to get an API token!--> */}
-				<form id="contactForm" data-sb-form-api-token="API_TOKEN">
+				<form id="contactForm" data-sb-form-api-token="API_TOKEN" onSubmit={e => onSubmitForm(e)}>
 					<div className="row align-items-stretch mb-5">
 						{fields.sections.map((section, sectionIndex) => {
 							return (
 								<div className="col-md-6" key={sectionIndex}>
 									{section.map((field, fieldIndex) => {
 										return (
-											<Field {...field} key={fieldIndex} />
+											<Field {...field} key={fieldIndex} value={form[field.name]} onChange={(e) =>
+												setForm((prevForm) => ({
+													...prevForm,
+													[field.name]: e.target.value,
+												}))} />
+
 										)
 									})}
 
@@ -61,9 +78,11 @@ export default function Contact() {
                     <!-- an error submitting the form--> */}
 					<div className="d-none" id="submitErrorMessage"><div className="text-center text-danger mb-3">Error sending message!</div></div>
 					{/* <!-- Submit Button--> */}
-					<div className="text-center"><button className="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
+					<div className="text-center"><button className="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit" >Send Message</button></div>
 				</form>
 			</div>
 		</section>
 	)
 }
+
+export default Contact
